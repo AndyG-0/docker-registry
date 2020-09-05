@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Deploy to k3s') {
+        stage('Test - Deploy to k3s') {
             when {
                 expression {
                     env.BRANCH_NAME != 'master'

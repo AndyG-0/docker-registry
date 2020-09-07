@@ -10,3 +10,7 @@ spec:
         - backend:
             serviceName: registry
             servicePort: 80
+  tls:
+  - hosts:
+    - registry-192.168.1.38.nip.io
+    secretName: registry-ingress-tls

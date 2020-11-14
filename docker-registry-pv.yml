@@ -16,5 +16,5 @@ spec:
   mountOptions:
     - nfsvers=4.1
   nfs:
-    path: /media/k8sNFS/docker-registry/
+    path: /media/mybook/k8sNFS/docker-registry/
     server: 192.168.1.142

@@ -7,14 +7,14 @@ metadata:
     nfs: registry
 spec:
   capacity:
-    storage: 1Gi
+    storage: 5Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: slow
   mountOptions:
-    - nfsvers=3
+    - nfsvers=4.1
   nfs:
-    path: /media/pi/Elements/k8sNFS/docker-registry/
-    server: 192.168.1.91
+    path: /media/k8sNFS/docker-registry/
+    server: 192.168.1.142

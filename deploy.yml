@@ -21,6 +21,9 @@ spec:
       containers:
       - image: registry
         name: registry
+        env:
+        - name: REGISTRY_HEALTH_STORAGEDRIVER_ENABLED
+          value: "false"
         resources: {}
         ports:
         - containerPort: 5000      

@@ -21,7 +21,7 @@ pipeline {
             }
             agent {
                 docker {
-                    image 'dtzar//helm-kubectl:latest'
+                    image 'dtzar/helm-kubectl:latest'
                     args '-v /var/lib/jenkins/config:/var/lib/jenkins/config'
                 }
             }

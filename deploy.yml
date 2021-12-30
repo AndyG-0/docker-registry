@@ -2,7 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: registry
   name: registry
@@ -14,7 +13,6 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: registry
     spec:
@@ -29,9 +27,8 @@ spec:
         - containerPort: 5000      
         volumeMounts:
         - mountPath: "/var/lib/registry"
-          name: registry-pvc
+          name: registry
       volumes:
-        - name: registry-pvc
+        - name: registry
           persistentVolumeClaim:
-            claimName: registry-pvc
-status: {}
+            claimName: registry

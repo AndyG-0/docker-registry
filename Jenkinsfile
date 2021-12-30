@@ -10,7 +10,7 @@ pipeline {
             }
             steps {
                     echo 'Deploying using helm...'
-                    sh 'export KUBECONFIG=/var/lib/jenkins/config && kubectl apply -n registry -f ./ --dry-run server'
+                    sh 'export KUBECONFIG=/var/lib/jenkins/config && kubectl apply -n registry -f ./ --dry-run=server'
             }
         }
         stage('Deploy to k3s') {
